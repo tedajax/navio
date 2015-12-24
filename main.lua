@@ -20,6 +20,15 @@ function love.load()
     local groundShape = love.physics.newEdgeShape(-w, h, w, h)
     local groundFixture = love.physics.newFixture(groundBody, groundShape)
 
+    for i = 1, 5 do
+        local b = love.physics.newBody(Game.collision.world)
+        local x = math.random(-w, w)
+        local y = math.random(-h, h)
+        local w = math.random(50, 250)
+        local s = love.physics.newEdgeShape(x, y, x + w, y)
+        love.physics.newFixture(b, s)
+    end
+
     Game.camera = Camera()
     Game.lander = Lander(Vec2(0, 0), Game.config.lander, Game.collision)
 end
