@@ -1,0 +1,60 @@
+{
+    "lander": {
+        "width": 32,
+        "height": 48,
+        "thrust": {
+            "x": 1000,
+            "y": 2500
+        },
+        "mass": 1
+    },
+    "physics": {
+        "gravity": { "x": 0, "y": 75 },
+        "meter": 10,
+        "layers": {
+            "lander": [ 1, 1, 1 ]
+        }
+    },
+    "input": {
+        "axes": {
+            "horizontal": {
+                "min": -1,
+                "max": 1,
+                "dead_zone": 0.1,
+                "base_value": 0
+            },
+            "vertical": {
+                "min": 0,
+                "max": 1,
+                "dead_zone": 0.1,
+                "base_value": 0
+            }
+        },
+        "buttons": {
+
+        },
+        "bindings": [
+            {
+                "type": "axis",
+                "name": "horizontal",
+                "device": "keyboard",
+                "key": "left",
+                "value": -1
+            },
+            {
+                "type": "axis",
+                "name": "horizontal",
+                "device": "keyboard",
+                "key": "right",
+                "value": 1
+            },
+            {
+                "type": "axis",
+                "name": "vertical",
+                "device": "keyboard",
+                "key": "up",
+                "value": -1
+            }
+        ]
+    }
+}
